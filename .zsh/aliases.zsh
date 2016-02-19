@@ -6,15 +6,15 @@ fi
 alias ll='ls -Fhl'
 alias l='ls -alFh'
 
-alias cp='cp --interactive'
-alias mv='mv --interactive'
-alias rm='rm --interactive'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
 
 alias c='clear'
-alias less='less --quiet'
+alias less='less -q'
 alias s='cd ..'
-alias df='df --human-readable'
-alias du='du --human-readable'
+alias df='df -h'
+alias du='du -h'
 
 # -------------------------------------------------------------------
 # directory movement
