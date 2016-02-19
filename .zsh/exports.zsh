@@ -9,13 +9,13 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
 export LESS='--ignore-case --raw-control-chars'
-if command most
+if command -v most > /dev/null
 then
     export PAGER='most'
 else
     export PAGER='less'
 fi
-if command nvim
+if command -v nvim > /dev/null
 then
     export EDITOR='nvim'
 else
