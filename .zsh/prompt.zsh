@@ -1,3 +1,5 @@
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+
 function git_prompt_info {
   local ref=$(=git symbolic-ref HEAD 2> /dev/null)
   local gitst="$(=git status 2> /dev/null)"
@@ -99,17 +101,17 @@ function parse_git_state() {
 # If inside a Git repository, print its branch and state
 function git_prompt_string() {
   local git_where="$(parse_git_branch)"
-  [ -n "$git_where" ] && echo "on %{$fg[blue]%}${git_where#(refs/heads/|tags/)}$(parse_git_state)"
+  [ -n "$git_where" ] && echo "on %{$fg[red]%}${git_where#(refs/heads/|tags/)}$(parse_git_state)"
 }
 
 function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
 
-PROMPT='${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}@%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}:%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)
+PROMPT='${PR_BOLD_WHITE}%T${reset_color} ${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}@%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}:%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)
 $(prompt_char) '
 
-export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
+SPROMPT="Correct ${PR_RED}%R$reset_color to ${PR_GREEN}%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
-RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%}'
+RPROMPT="${PR_GREEN}$(virtualenv_info)%{$reset_color%}"
 

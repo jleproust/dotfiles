@@ -1,4 +1,4 @@
-export PATH=/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH="/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:$PATH"
 
 # Setup terminal, and turn on colors
 #export TERM=xterm-256color
@@ -28,7 +28,7 @@ fi
 # GitHub token with no scope, used to get around API limits
 #export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.gh_api_token)
 
-export WORKON_HOME=$HOME/.virtualenvs
+export WORKON_HOME="$HOME/.virtualenvs"
 if [ -x /usr/local/bin/virtualenvwrapper.sh ]
 then
     source /usr/local/bin/virtualenvwrapper.sh
