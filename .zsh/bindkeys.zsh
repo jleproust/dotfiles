@@ -11,3 +11,7 @@ bindkey "[A"      history-search-backward              # up arrow
 bindkey "^D"      delete-char                          # ctrl-d
 bindkey "^F"      forward-char                         # ctrl-f
 bindkey "^B"      backward-char                        # ctrl-b
+bindkey '[3~'   delete-char                          # Del
+bindkey '[2~'   overwrite-mode                       # Insert
+bindkey '[5~'   history-search-backward              # PgUp
+bindkey '[6~'   history-search-forward               # PgDn

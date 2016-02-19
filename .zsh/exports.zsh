@@ -3,7 +3,6 @@ export PATH=/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:$PATH
 # Setup terminal, and turn on colors
 export TERM=xterm-256color
 export CLICOLOR=1
-export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # Enable color in grep
 export GREP_OPTIONS='--color=auto'
@@ -14,7 +13,13 @@ export PAGER='most'
 export EDITOR='vim'
 #export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
-export LC_COLLATE=C
+#export LC_COLLATE=C
 
 # GitHub token with no scope, used to get around API limits
 #export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.gh_api_token)
+
+export WORKON_HOME=$HOME/.virtualenvs
+if [ -x /usr/local/bin/virtualenvwrapper.sh ]
+then
+    source /usr/local/bin/virtualenvwrapper.sh
+fi
