@@ -1,3 +1,4 @@
+source "$HOME/.zsh/checks.zsh"
 source "$HOME/.zsh/colors.zsh"
 source "$HOME/.zsh/setopt.zsh"
 source "$HOME/.zsh/exports.zsh"
