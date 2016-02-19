@@ -37,22 +37,6 @@ function extract {
   fi
 }
 
-function ss {
-  if [ -e script/server ]; then
-    script/server $@
-  else
-    script/rails server $@
-  fi
-}
-
-function sc {
-  if [ -e script/console ]; then
-    script/console $@
-  else
-    script/rails console $@
-  fi
-}
-
 function trash () {
   local path
   for path in "$@"; do
