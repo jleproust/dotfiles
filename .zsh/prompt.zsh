@@ -109,9 +109,9 @@ function current_pwd {
 }
 
 PROMPT='${PR_BOLD_WHITE}%T${reset_color} ${PR_GREEN}%n%{$reset_color%} %{$FG[239]%}@%{$reset_color%} ${PR_BOLD_BLUE}$(box_name)%{$reset_color%} %{$FG[239]%}:%{$reset_color%} ${PR_BOLD_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)
-$(prompt_char) '
+${PR_GREEN}$(virtualenv_info)%{$reset_color%}$(prompt_char) '
 
 SPROMPT="Correct ${PR_RED}%R$reset_color to ${PR_GREEN}%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
-RPROMPT="${PR_GREEN}$(virtualenv_info)%{$reset_color%}"
+#RPROMPT="${PR_GREEN}$(virtualenv_info)%{$reset_color%}"
 

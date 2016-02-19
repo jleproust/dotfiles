@@ -37,7 +37,7 @@ alias 'filecount=find . -type f | wc -l' # number of files (not directories)
 # -------------------------------------------------------------------
 # Mac only
 # -------------------------------------------------------------------
-if [[ $IS_MAC -eq 1 ]]; then
+if [[ -n "$IS_MAC" ]]; then
     alias ql='qlmanage -p 2>/dev/null' # OS X Quick Look
     alias oo='open .' # open current directory in OS X Finder
     alias 'today=calendar -A 0 -f /usr/share/calendar/calendar.mark | sort'

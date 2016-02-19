@@ -26,7 +26,10 @@ fi
 #export LC_COLLATE=C
 
 # GitHub token with no scope, used to get around API limits
-#export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.gh_api_token)
+if [[ -n "%$IS_MAC" ]]
+then
+    export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.gh_api_token)
+fi
 
 export WORKON_HOME="$HOME/.virtualenvs"
 if [ -x /usr/local/bin/virtualenvwrapper.sh ]
