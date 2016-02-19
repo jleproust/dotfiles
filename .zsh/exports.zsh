@@ -9,8 +9,18 @@ export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
 export LESS='--ignore-case --raw-control-chars'
-export PAGER='most'
-export EDITOR='vim'
+if command most
+then
+    export PAGER='most'
+else
+    export PAGER='less'
+fi
+if command nvim
+then
+    export EDITOR='nvim'
+else
+    export EDITOR='vim'
+fi
 #export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 #export LC_COLLATE=C
