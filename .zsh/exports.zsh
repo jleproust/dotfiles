@@ -1,7 +1,7 @@
 export PATH=/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # Setup terminal, and turn on colors
-export TERM=xterm-256color
+#export TERM=xterm-256color
 export CLICOLOR=1
 
 # Enable color in grep
