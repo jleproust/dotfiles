@@ -1,13 +1,14 @@
-source ~/.zsh/colors.zsh
-source ~/.zsh/setopt.zsh
-source ~/.zsh/exports.zsh
-source ~/.zsh/prompt.zsh
-source ~/.zsh/completion.zsh
-source ~/.zsh/aliases.zsh
-source ~/.zsh/bindkeys.zsh
-source ~/.zsh/functions.zsh
-source ~/.zsh/history.zsh
-source ~/.zsh/zsh_hooks.zsh
+source $HOME/.zsh/colors.zsh
+source $HOME/.zsh/setopt.zsh
+source $HOME/.zsh/exports.zsh
+source $HOME/.zsh/prompt.zsh
+source $HOME/.zsh/completion.zsh
+source $HOME/.zsh/aliases.zsh
+source $HOME/.zsh/bindkeys.zsh
+source $HOME/.zsh/functions.zsh
+source $HOME/.zsh/history.zsh
+source $HOME/.zsh/zsh_hooks.zsh
+source $HOME/.zsh/z/z.sh
 
 precmd() {
   if [[ -n "$TMUX" ]]; then
