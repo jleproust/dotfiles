@@ -106,7 +106,7 @@ path() {
 # -------------------------------------------------------------------
 # Mac specific functions
 # -------------------------------------------------------------------
-if [[ $IS_MAC -eq 1 ]]; then
+if [[ -n "$IS_MAC" ]]; then
 
     # view man pages in Preview
     pman() { ps=`mktemp -t manpageXXXX`.ps ; man -t $@ > "$ps" ; open "$ps" ; }

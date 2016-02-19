@@ -1,4 +1,7 @@
-alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
+if [[ ! -n "$IS_MAC" ]]
+then
+    alias ls='ls --classify --tabsize=0 --literal --color=auto --show-control-chars --human-readable'
+fi
 
 alias ll='ls -Fhl'
 alias l='ls -alFh'
