@@ -26,7 +26,7 @@ fi
 #export LC_COLLATE=C
 
 # GitHub token with no scope, used to get around API limits
-if [[ -n "%$IS_MAC" ]]
+if [[ -n "$IS_MAC" && -e ~/.gh_api_token ]]
 then
     export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.gh_api_token)
 fi
