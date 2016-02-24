@@ -1,20 +1,30 @@
-function precmd {
-  # vcs_info
-  # Put the string "hostname::/full/directory/path" in the title bar:
-  echo -ne "\e]2;$PWD\a"
+function title() {
+    # escape '%' chars in $1, make nonprintables visible
+    local a=${(V)1//\%/\%\%}
 
-  # Put the parentdir/currentdir in the tab
-  echo -ne "\e]1;$PWD:h:t/$PWD:t\a"
+    # Truncate command, and join lines.
+    a=$(print -Pn "%40>...>$a" | tr -d "\n")
+    case $TERM in
+        screen*)
+            print -Pn "\e]2;$a - $2\a" # plain xterm title
+            print -Pn "\ek$a\e\\"      # screen title (in ^A")
+            print -Pn "\e_$2   \e\\"   # screen location
+            ;;
+        xterm*)
+            print -Pn "\e]2;$a - $2\a" # plain xterm title
+            ;;
+    esac
+    if [[ -n "$TMUX" ]]; then
+        tmux setenv "$(tmux display -p 'TMUX_PWD_#D')" "$PWD"
+    fi
 }
 
-function set_running_app {
-  printf "\e]1; $PWD:t:$(history $HISTCMD | cut -b7- ) \a"
+# precmd is called just before the prompt is printed
+function precmd() {
+    title "zsh" "%n@%m:%55<...<%~"
 }
 
-function preexec {
-  set_running_app
-}
-
-function postexec {
-  set_running_app
+# preexec is called just before any command line is executed
+function preexec() {
+    title "$1" "%n@%m:%35<...<%~"
 }

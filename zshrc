@@ -12,8 +12,3 @@ source "$HOME/.zsh/zsh_hooks.zsh"
 source "$HOME/.zsh/z/z.sh"
 [[ -e "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
-precmd() {
-  if [[ -n "$TMUX" ]]; then
-    tmux setenv "$(tmux display -p 'TMUX_PWD_#D')" "$PWD"
-  fi
-}
