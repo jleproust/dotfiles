@@ -128,7 +128,7 @@ set smartcase
 set foldmethod=indent
 set foldlevel=12
 
-set viewoptions=cursor,folds,options,unix,slash
+set viewoptions=cursor,folds,unix,slash
 set viewdir=~/.vim/views//
 au BufWinLeave * mkview
 au BufWinEnter * silent! loadview
