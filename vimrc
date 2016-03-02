@@ -154,8 +154,23 @@ set foldlevel=12
 
 set viewoptions=cursor,folds,unix,slash
 set viewdir=~/.vim/views//
-au BufWritePost,BufLeave,WinLeave * mkview
-au BufReadPost * silent loadview
+
+let g:skipview_files = [
+            \ '[EXAMPLE PLUGIN BUFFER]'
+            \ ]
+augroup AutoView
+    autocmd!
+    " Autosave & Load Views.
+    autocmd BufWritePost,BufWinLeave,BufLeave,WinLeave *
+          \   if expand('%') != '' && &buftype !~ 'nofile'
+          \|      mkview
+          \|  endif
+    autocmd BufRead *
+          \   if expand('%') != '' && &buftype !~ 'nofile'
+          \|      silent loadview
+          \|  endif
+augroup end
+
 
 let mapleader=' '
 
