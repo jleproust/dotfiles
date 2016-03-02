@@ -172,6 +172,25 @@ augroup AutoView
 augroup end
 
 
-let mapleader=' '
+let mapleader="\<Space>"
 
-map <Leader>s :source ~/.vimrc<CR>
+nnoremap <Leader>s :source ~/.vimrc<CR>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+
+" copy/paste
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+" jump to end pasted text
+vnoremap <silent> y y`]
+vnoremap <silent> p p`]
+nnoremap <silent> p p`]
+
+map q: :q
+
+
