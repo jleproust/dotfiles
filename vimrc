@@ -26,12 +26,13 @@ let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ 'mode_map': { 'c': 'NORMAL' },
     \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
+    \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename',  'gitgutter' ] ]
     \ },
     \ 'component_function': {
     \   'modified': 'LightLineModified',
     \   'readonly': 'LightLineReadonly',
     \   'fugitive': 'LightLineFugitive',
+    \   'gitgutter': 'LightLineGitGutter',
     \   'filename': 'LightLineFilename',
     \   'fileformat': 'LightLineFileformat',
     \   'filetype': 'LightLineFiletype',
@@ -63,6 +64,27 @@ function! LightLineFugitive()
   if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
     let _ = fugitive#head()
     return strlen(_) ? ''._ : ''
+  endif
+  return ''
+endfunction
+
+function! LightLineGitGutter()
+  if !exists('*GitGutterGetHunkSummary')
+    return ''
+  endif
+  let hunks = GitGutterGetHunkSummary()
+  let string = ''
+  if !empty(hunks)
+    let string .= AddGitGutterHunks('+', hunks[0])
+    let string .= AddGitGutterHunks('~', hunks[1])
+    let string .= AddGitGutterHunks('-', hunks[2])
+  endif
+  return string
+endfunction
+
+function! AddGitGutterHunks(symbol, hunks)
+  if a:hunks > 0
+    return printf('%s%s ', a:symbol, a:hunks)
   endif
   return ''
 endfunction
@@ -103,6 +125,7 @@ set linebreak
 set wildmenu
 set wildmode=list:full
 set mouse=a
+set noshowmode
 
 if v:version >= 703
     set undodir=~/.vim/undo
@@ -122,6 +145,7 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
+set hlsearch
 set ignorecase
 set smartcase
 
