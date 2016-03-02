@@ -130,8 +130,8 @@ set foldlevel=12
 
 set viewoptions=cursor,folds,unix,slash
 set viewdir=~/.vim/views//
-au BufWinLeave * mkview
-au BufWinEnter * silent! loadview
+au BufWritePost,BufLeave,WinLeave ?* mkview
+au BufReadPre ?* silent loadview
 
 let mapleader=' '
 
