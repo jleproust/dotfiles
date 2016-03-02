@@ -1,4 +1,4 @@
-" let's be serious
+" just in case
 set nocompatible
 
 " pathogen
@@ -22,16 +22,21 @@ else
     \ }
 endif
 
+" colors
+colorscheme dracula
+"let g:airline_theme='tomorrow'
+
 " global options
 set updatetime=250
+
+set hidden
+
+set laststatus=2
 
 set number
 set relativenumber
 
 set list
 set listchars=tab:▸-,trail:·
-
-colorscheme dracula
-let g:airline_theme='tomorrow'
 
 

@@ -28,12 +28,6 @@
 [submodule "vim/bundle/virtualenv"]
 	path = vim/bundle/virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
-[submodule "vim/bundle/airline"]
-	path = vim/bundle/airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule "vim/bundle/airline-themes"]
-	path = vim/bundle/airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule "vim/bundle/dracula-theme"]
 	path = vim/bundle/dracula-theme
 	url = https://github.com/zenorocha/dracula-theme.git
