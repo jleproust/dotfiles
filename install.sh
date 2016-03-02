@@ -12,5 +12,6 @@ done
 VIM_DIRS="undo swaps views"
 for i in $VIM_DIRS
 do
-    mkdir -p "$DIR/$i"
+    mkdir -p "$DIR/vim/$i"
+    chmod go-rwx "$DIR/vim/$i"
 done
