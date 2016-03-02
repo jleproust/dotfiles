@@ -52,3 +52,6 @@
 [submodule "vim/bundle/bracketed-paste"]
 	path = vim/bundle/bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
+[submodule "vim/bundle/expand-region"]
+	path = vim/bundle/expand-region
+	url = https://github.com/terryma/vim-expand-region.git
