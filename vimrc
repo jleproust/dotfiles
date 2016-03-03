@@ -167,7 +167,7 @@ augroup AutoView
           \|  endif
     autocmd BufRead *
           \   if expand('%') != '' && &buftype !~ 'nofile'
-          \|      silent loadview
+          \|      silent! loadview
           \|  endif
 augroup end
 
