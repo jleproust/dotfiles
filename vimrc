@@ -129,12 +129,18 @@ set noshowmode
 
 if v:version >= 703
     set undodir=~/.vim/undo
+    if !isdirectory(expand(&undodir))
+      call mkdir(expand(&undodir), "p")
+    endif
     set undofile
 
     set colorcolumn=+1
 endif
 
 set directory=~/.vim/swaps//
+if !isdirectory(expand(&directory))
+  call mkdir(expand(&directory), "p")
+endif
 
 set shiftwidth=4
 set softtabstop=4
@@ -154,6 +160,9 @@ set foldlevel=12
 
 set viewoptions=cursor,folds,unix,slash
 set viewdir=~/.vim/views//
+if !isdirectory(expand(&viewdir))
+  call mkdir(expand(&viewdir), "p")
+endif
 
 let g:skipview_files = [
             \ '[EXAMPLE PLUGIN BUFFER]'
