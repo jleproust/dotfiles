@@ -55,3 +55,6 @@
 [submodule "vim/bundle/expand-region"]
 	path = vim/bundle/expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+[submodule "vim/bundle/salt"]
+	path = vim/bundle/salt
+	url = https://github.com/saltstack/salt-vim
