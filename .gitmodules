@@ -58,3 +58,6 @@
 [submodule "vim/bundle/salt"]
 	path = vim/bundle/salt
 	url = https://github.com/saltstack/salt-vim
+[submodule "vim/bundle/unimpaired"]
+	path = vim/bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
