@@ -124,8 +124,9 @@ set wrap
 set linebreak
 set wildmenu
 set wildmode=list:full
-set mouse=a
 set noshowmode
+set mouse=a
+set clipboard=unnamed
 
 if v:version >= 703
     set undodir=~/.vim/undo
@@ -186,6 +187,7 @@ let mapleader="\<Space>"
 nnoremap <Leader>s :source ~/.vimrc<CR>
 nnoremap <Leader>o :CtrlP<CR>
 nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :q<CR>
 
 " copy/paste
 vmap <Leader>y "+y
