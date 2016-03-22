@@ -115,7 +115,7 @@ set hidden
 set laststatus=2
 set nostartofline
 set history=1000
-set whichwrap=<,>,[,]
+set whichwrap=b,s,<,>,[,]
 set number
 set relativenumber
 set list
@@ -123,7 +123,7 @@ set listchars=tab:▸-,trail:·,nbsp:·
 set wrap
 set linebreak
 set wildmenu
-set wildmode=list:full
+set wildmode=longest,list:full
 set noshowmode
 set mouse=a
 set clipboard=unnamed
@@ -158,6 +158,9 @@ set smartcase
 
 set foldmethod=indent
 set foldlevel=12
+
+set splitbelow
+set splitright
 
 set viewoptions=cursor,folds,unix,slash
 set viewdir=~/.vim/views//
