@@ -4,10 +4,6 @@ export PATH="/usr/local/sbin:/usr/local/bin:$HOME/.local/bin:$PATH"
 #export TERM=xterm-256color
 export CLICOLOR=1
 
-# Enable color in grep
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='3;33'
-
 export LESS='--ignore-case --raw-control-chars'
 if command -v most > /dev/null
 then

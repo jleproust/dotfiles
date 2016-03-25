@@ -15,6 +15,7 @@ alias less='less -q'
 alias s='cd ..'
 alias df='df -h'
 alias du='du -h'
+alias grep='grep --color=auto'
 alias bwm='bwm-ng -t 1000'
 
 # use nvim when available
