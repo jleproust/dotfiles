@@ -37,9 +37,6 @@
 [submodule "vim/bundle/gitignore"]
 	path = vim/bundle/gitignore
 	url = https://github.com/vim-scripts/gitignore.git
-[submodule "vim/bundle/swapit"]
-	path = vim/bundle/swapit
-	url = https://github.com/mjbrownie/swapit.git
 [submodule "vim/bundle/lightline"]
 	path = vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim.git
