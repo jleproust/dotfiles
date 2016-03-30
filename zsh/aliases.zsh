@@ -84,7 +84,6 @@ fi
 # Git
 # -------------------------------------------------------------------
 alias ga='git add'
-alias gp='git push'
 alias gl='git log'
 alias gpl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias gpl2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
@@ -97,7 +96,8 @@ alias gc='git checkout'
 alias gcb='git checkout -b'
 alias gra='git remote add'
 alias grr='git remote rm'
-alias gpu='git pull'
+alias gp='git pull'
+alias gpr='git pull --recurse-submodules'
 alias gcl='git clone'
 alias gta='git tag -a -m'
 alias gf='git reflog'
