@@ -58,3 +58,6 @@
 [submodule "vim/bundle/unimpaired"]
 	path = vim/bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "vim/bundle/switch"]
+	path = vim/bundle/switch
+	url = https://github.com/AndrewRadev/switch.vim.git
