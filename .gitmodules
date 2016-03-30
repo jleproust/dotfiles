@@ -1,63 +1,84 @@
 [submodule "zsh/z"]
 	path = zsh/z
 	url = https://github.com/rupa/z.git
+	ignore = untracked
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+	ignore = untracked
 [submodule "vim/bundle/vim-fugitive"]
 	path = vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+	ignore = untracked
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
+	ignore = untracked
 [submodule "vim/bundle/vim-sleuth"]
 	path = vim/bundle/sleuth
 	url = https://github.com/tpope/vim-sleuth
+	ignore = untracked
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/commentary
 	url = https://github.com/tpope/vim-commentary
+	ignore = untracked
 [submodule "vim/bundle/ack.vim"]
 	path = vim/bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
+	ignore = untracked
 [submodule "vim/bundle/csv"]
 	path = vim/bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
+	ignore = untracked
 [submodule "vim/bundle/gitgutter"]
 	path = vim/bundle/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+	ignore = untracked
 [submodule "vim/bundle/virtualenv"]
 	path = vim/bundle/virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+	ignore = untracked
 [submodule "vim/bundle/dracula-theme"]
 	path = vim/bundle/dracula-theme
 	url = https://github.com/zenorocha/dracula-theme.git
+	ignore = untracked
 [submodule "vim/bundle/sensible"]
 	path = vim/bundle/sensible
 	url = https://github.com/tpope/vim-sensible.git
+	ignore = untracked
 [submodule "vim/bundle/gitignore"]
 	path = vim/bundle/gitignore
 	url = https://github.com/vim-scripts/gitignore.git
+	ignore = untracked
 [submodule "vim/bundle/lightline"]
 	path = vim/bundle/lightline
 	url = https://github.com/itchyny/lightline.vim.git
+	ignore = untracked
 [submodule "vim/bundle/eunuch"]
 	path = vim/bundle/eunuch
 	url = https://github.com/tpope/vim-eunuch.git
+	ignore = untracked
 [submodule "vim/bundle/targets"]
 	path = vim/bundle/targets
 	url = https://github.com/wellle/targets.vim.git
+	ignore = untracked
 [submodule "vim/bundle/bracketed-paste"]
 	path = vim/bundle/bracketed-paste
 	url = https://github.com/ConradIrwin/vim-bracketed-paste.git
+	ignore = untracked
 [submodule "vim/bundle/expand-region"]
 	path = vim/bundle/expand-region
 	url = https://github.com/terryma/vim-expand-region.git
+	ignore = untracked
 [submodule "vim/bundle/salt"]
 	path = vim/bundle/salt
 	url = https://github.com/saltstack/salt-vim
+	ignore = untracked
 [submodule "vim/bundle/unimpaired"]
 	path = vim/bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+	ignore = untracked
 [submodule "vim/bundle/switch"]
 	path = vim/bundle/switch
 	url = https://github.com/AndrewRadev/switch.vim.git
+	ignore = untracked
