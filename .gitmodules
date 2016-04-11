@@ -82,3 +82,6 @@
 	path = vim/bundle/switch
 	url = https://github.com/AndrewRadev/switch.vim.git
 	ignore = untracked
+[submodule "vim/bundle/bufstop"]
+	path = vim/bundle/bufstop
+	url = https://github.com/mihaifm/bufstop
