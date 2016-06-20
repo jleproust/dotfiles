@@ -126,7 +126,6 @@ set wildmenu
 set wildmode=longest,list:full
 set noshowmode
 set mouse=a
-set clipboard=unnamed
 
 if v:version >= 703
     set undodir=~/.vim/undo
