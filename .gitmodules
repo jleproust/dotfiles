@@ -86,3 +86,6 @@
 	path = vim/bundle/bufstop
 	url = https://github.com/mihaifm/bufstop
 	ignore = untracked
+[submodule "vim/bundle/obsession"]
+	path = vim/bundle/obsession
+	url = https://github.com/tpope/vim-obsession
