@@ -11,7 +11,10 @@ filetype plugin on
 runtime! plugin/sensible.vim
 
 " plugin options
+
 let g:ackhighlight = 1
+let g:ack_autofold_results = 1
+
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
@@ -105,6 +108,16 @@ function! LightLineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
+let g:BufstopSpeedKeys = ["<F1>", "<F2>", "<F3>", "<F4>", "<F5>", "<F6>"]
+let g:BufstopLeader = ""
+let g:BufstopAutoSpeedToggle = 1
+
+" make CtrlP open files in current window
+
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_working_path_mode = 'raw'
+let g:ctrlp_match_window ='bottom,order:btt,min:1,max:10,results:100'
+
 " colors
 colorscheme dracula
 
@@ -183,13 +196,13 @@ augroup AutoView
           \|  endif
 augroup end
 
-
 let mapleader="\<Space>"
 
-nnoremap <Leader>s :source ~/.vimrc<CR>
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>s :source ~/.vimrc<CR>:echo 'Configuration reloaded.'<CR>
+nnoremap <Leader>o :CtrlPMixed<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>f :Ack!<Space>
 
 " copy/paste
 vmap <Leader>y "+y
@@ -204,6 +217,10 @@ vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
 
-map q: :q
+" BufStop mappings
+map <leader>b :Bufstop<CR>
+map <leader>a :BufstopModeFast<CR>
+map <C-tab>   :BufstopBack<CR>
+map <S-tab>   :BufstopForward<CR>
 
 
