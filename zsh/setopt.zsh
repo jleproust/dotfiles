@@ -23,9 +23,9 @@ setopt extended_glob # treat #, ~, and ^ as part of patterns for filename genera
 setopt glob_dots
 
 # ===== History
-setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
+#setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
 setopt extended_history # save timestamp of command and duration
-setopt inc_append_history # Add comamnds as they are typed, don't wait until shell exit
+setopt inc_append_history # Add commands as they are typed, don't wait until shell exit
 setopt hist_expire_dups_first # when trimming history, lose oldest duplicates first
 setopt hist_ignore_dups # Do not write events to history that are duplicates of previous events
 setopt hist_ignore_space # remove command line from history list when first character on the line is a space
