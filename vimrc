@@ -1,5 +1,7 @@
 " just in case
 set nocompatible
+scriptencoding utf-8
+set encoding=utf-8
 
 " pathogen
 runtime bundle/vim-pathogen/autoload/pathogen.vim
