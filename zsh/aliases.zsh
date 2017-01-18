@@ -121,6 +121,9 @@ alias gu="git shortlog | grep -E '^[^ ]'"
 alias mkenv='mkvirtualenv'
 alias on="workon"
 alias off="deactivate"
+gpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
 
 # -------------------------------------------------------------------
 # Oddball stuff
