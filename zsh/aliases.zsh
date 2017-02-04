@@ -128,12 +128,6 @@ gpip() {
 # -------------------------------------------------------------------
 # Oddball stuff
 # -------------------------------------------------------------------
-alias 'sloc=/usr/local/sloccount/bin/sloccount'
-alias 'ttop=top -ocpu -R -F -s 2 -n30' # fancy top
-
-# Force tmux to use 256 colors
-alias tmux='TERM=screen-256color-bce tmux'
-
 # alias to cat this file to display
 alias sz='source ~/.zshrc'
 
