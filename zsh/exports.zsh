@@ -31,7 +31,10 @@ fi
 export PIP_REQUIRE_VIRTUALENV=true
 
 export WORKON_HOME="$HOME/.virtualenvs"
-if [ -x /usr/local/bin/virtualenvwrapper.sh ]
+if [ -r /usr/local/bin/virtualenvwrapper.sh ]
 then
     source /usr/local/bin/virtualenvwrapper.sh
+elif [ -r /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]
+then
+    source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 fi
