@@ -3,5 +3,5 @@
 git pull
 
 git submodule sync
-git submodule update --recursive --remote
+git submodule update --init --recursive --remote
 
