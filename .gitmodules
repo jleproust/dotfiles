@@ -40,7 +40,7 @@
 	ignore = untracked
 [submodule "vim/bundle/dracula-theme"]
 	path = vim/bundle/dracula-theme
-	url = https://github.com/dracula/dracula-theme.git
+	url = https://github.com/dracula/vim.git
 	ignore = untracked
 [submodule "vim/bundle/sensible"]
 	path = vim/bundle/sensible
