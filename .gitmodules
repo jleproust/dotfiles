@@ -89,3 +89,6 @@
 [submodule "vim/bundle/obsession"]
 	path = vim/bundle/obsession
 	url = https://github.com/tpope/vim-obsession
+[submodule "vim/bundle/ale"]
+	path = vim/bundle/ale
+	url = https://github.com/w0rp/ale.git
