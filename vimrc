@@ -120,6 +120,9 @@ let g:ctrlp_open_new_file = 'r'
 let g:ctrlp_working_path_mode = 'raw'
 let g:ctrlp_match_window ='bottom,order:btt,min:1,max:10,results:100'
 
+" ALE options
+let g:ale_python_flake8_args = '--ignore=E501'
+
 " colors
 colorscheme dracula
 
