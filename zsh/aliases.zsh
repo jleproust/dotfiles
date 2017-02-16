@@ -17,6 +17,7 @@ alias df='df -h'
 alias du='du -h'
 alias grep='grep --color=auto'
 alias bwm='bwm-ng -t 1000'
+alias tn='tmux new-session'
 alias ta='tmux attach -d'
 
 # use nvim when available
