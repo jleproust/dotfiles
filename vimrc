@@ -176,6 +176,8 @@ set smartcase
 set foldmethod=indent
 set foldlevel=12
 
+set synmaxcol=250
+
 set splitbelow
 set splitright
 
