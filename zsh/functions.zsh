@@ -153,6 +153,6 @@ givedef() {
 # find a file by name
 # -------------------------------------------------------------------
 function ff () {
-  $FIND . -iname "*$*"
+  find . -iname "*$*"
 }
 
