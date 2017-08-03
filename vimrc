@@ -173,8 +173,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
-set foldmethod=indent
-set foldlevel=12
+set foldmethod=syntax
 
 set synmaxcol=250
 
