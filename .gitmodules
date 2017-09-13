@@ -92,3 +92,6 @@
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vim/bundle/terraform"]
+	path = vim/bundle/terraform
+	url = https://github.com/hashivim/vim-terraform
