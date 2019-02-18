@@ -30,3 +30,9 @@ then
     ln -sfn "$DIR/vim/bundle" "$NVIM_CONFIG/bundle"
 fi
 
+if [ -d "$HOME/.ssh" ]
+then
+    ln -sfn "$DIR/ssh_rc" "$HOME/.ssh/rc"
+fi
+
+"$DIR/gitconfig.sh"
